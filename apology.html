@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>I'm really sorry... Please forgive me 💙</h2>
+    <button onclick="forgive()">I Forgive You</button>
+    <button onclick="dontForgive()">I Don't Accept</button>
+
+    <p id="message"></p>
+
+    <script>
+        function forgive() {
+            document.getElementById("message").innerHTML = 
+                "<h3>Thanks for accepting my apologies. I love you to the core! 💙</h3>";
+        }
+
+        function dontForgive() {
+            let message = "<h3>😭 Please forgive me:</h3>";
+            for (let i = 1; i <= 10; i++) {
+                message += `<p>${i}. Please forgive me 💔</p>`;
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+
+</body>
+</html>
